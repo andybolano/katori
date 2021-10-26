@@ -1,0 +1,357 @@
+/*
+Theme Name: Katori
+Theme URI:
+Author: Andy Yair Bolaño Castilla
+Author URI: https://www.instagram.com/andybolano/
+Version:1.0
+Licence: GNU General Public Licence or later
+Tags:HTML5, css3, katori
+*/
+
+@font-face {
+    font-family: 'fujiBold';
+    src: url('./fonts/Fuji-Bold.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'CenturyGoticRegular';
+    src: url('./fonts/GOTHIC.TTF');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'CenturyGoticBold';
+    src: url('./fonts/GOTHICB.TTF');
+    font-weight: normal;
+}
+:root{
+    --primary-color:#009540;
+    --primary-color-hover:#289248; 
+    --dark-color:#000000;
+    --light-color:#FFFFFF;
+
+    --primary-font-bold:'fujiBold';
+    --secondary-font-regular:'CenturyGoticRegular';
+    --secondary-font-bold:'CenturyGoticBold'
+}
+
+body{
+    font-family: var(--secondary-font-bold);
+    color:var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, p, a{
+    color:var(--dark-color);
+    font-family: var(--secondary-font-bold);
+}
+
+.full-h{
+    height: 100%;
+}
+
+
+ul{
+    padding: 0;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    color:var(--light-color);
+    font-family: var(--primary-font-bold);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 20px;
+    width: fit-content;
+    font-size: 1.2em;
+    border:0;
+    outline:0px !important;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus,
+.btn-primary:active{
+    background-color: var(--primary-color-hover);
+    outline:0px !important;
+    border:0;
+}
+
+/****************navbar*******************/
+
+li.nav-item{
+    padding: 0 10px;
+}
+
+
+li.nav-item > a{
+    color:var(--primary-color) !important;
+    font-family: var(--primary-font-bold);
+    font-size: 1.2em !important;
+}
+.dropdown-menu{
+    background-color: var(--primary-color);
+    border-radius: 0;
+}
+
+.dropdown-item{
+    color:var(--light-color);
+    font-family: var(--primary-font-bold);
+    font-size: 1.2em;
+}
+
+.dropdown-item:hover{
+    background-color: var(--primary-color-hover);
+    color:var(--light-color);
+}
+
+.offcanvas-end{
+  width: auto !important;
+  min-width: 360px;
+  right: auto;
+  margin-left: 20px;
+}
+@media (min-width: 992px)  {
+    .navbar-expand-lg .offcanvas{
+        position: relative;
+    }
+
+    .navbar-expand-lg .offcanvas-body{
+        display: block;
+    }
+
+}
+
+@media (max-width: 992px)  {
+    .offcanvas-end{
+        width: 90% !important;
+        max-width: 400px;
+        min-width: auto;
+        top: 0;
+        right: 0;
+        left: auto;
+    }
+}
+
+.navbar-katori{
+    padding: 1.5rem 0 !important;
+}
+
+
+.social-network{
+    display: none;
+    margin-top: 15px;
+}
+
+.social-network ul{
+    margin: 0 !important;
+    padding: 0;
+}
+
+.social-network li{
+    display: inline;
+    padding-right: 10px;
+}
+
+.social-network.mobile{
+    position: absolute;
+    bottom: 40px;
+    display: block;
+}
+
+.social-item li a {
+    display: inline-block;
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    background-position: center;
+    margin: 0;
+}
+
+.social-item li a[href*="instagram.com"]{
+	background-image: url('img/instagram.png');
+}
+
+.social-item li a[href*="facebook.com"]{
+	background-image: url('img/facebook.png');
+}
+
+.social-item li a[href*="wa.me"]{
+    width: 42px;
+    height: 42px;
+	background-image: url('img/whatsapp.png');
+    margin: 0;
+}
+
+.social-network p{
+    color: var(--primary-color) !important;
+    font-family: var(--primary-font-bold);
+    font-size: 1em !important;
+    margin-right: 20px;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (min-width: 992px)  {
+    .social-network{
+        display: flex;
+    }
+
+    .social-network.mobile{
+        display: none;
+    }
+
+    
+}
+
+.logo{
+    width: 140px;
+}
+
+
+/**********end navbar**************/
+
+.wrapper-container{
+    margin-top: 96px;
+}
+
+/**************widget******************/
+.widget{
+    margin: 40px 0;
+}
+
+.call-to-video{
+    background-size: cover;
+    background-position: 0 10%;
+    background-repeat: no-repeat;
+    padding: 6em 3em;
+    border-radius: 20px;
+    position: relative;
+}   
+
+.call-to-video h1{
+    font-size:3em;
+    line-height:0.9em;
+    color:var(--light-color);
+    font-family: var(--primary-font-bold);
+}
+
+.call-to-video p{
+    margin: 20px 0;
+    font-size: 1.1em;
+    color:var(--light-color);
+}
+
+.call-to-video .content-text{
+    max-width: 380px;
+}
+
+.call-to-video .play{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('img/play.svg');
+}
+
+.legend-widget{
+    font-size: 1.1rem;
+}
+/*************footer*******************/
+footer{
+    background-color: var(--primary-color);
+}
+
+.wrapper-footer{
+    padding: 40px 20px;
+}
+
+
+
+.navbar-footer li{
+    padding-bottom: 5px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar-footer li a{
+    font-family: var(--primary-font-bold);
+    font-size: 1.3em;
+    color:var(--light-color);
+}
+
+.logo-foo{
+    margin-top: 40px;
+    background-image: url('img/logo-foo.svg');
+    width: 180px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: contain;
+    font-family: var(--secondary-font-regular);
+    float: left;
+}
+
+.lengend-logo-foo{
+    color:var(--light-color);
+    font-size: 12px;
+    margin-top: 65px;
+    float:left;
+}
+
+@media (max-width: 992px)  {
+    .lengend-logo-foo{
+        margin-top: 10px;
+    } 
+}
+
+.location-info{
+    font-family: var(--secondary-font-regular);
+    color:var(--light-color);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.form-control{
+    border:3px solid var(--primary-color) !important;
+    color:var(--dark-color);
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+::placeholder {
+    color: var(--dark-color) !important;
+    font-weight: 600;
+}
+
+.btn-secondary{
+    border:3px solid var(--primary-color) !important;
+    background-color: var(--light-color);
+    color:var(--dark-color);
+    font-family: var(--secondary-font-regular);
+    font-weight: 600;
+}
