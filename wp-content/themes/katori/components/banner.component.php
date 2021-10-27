@@ -53,6 +53,12 @@
 .carousel-indicators .active {
     background-color: #FFF;
 }
+
+@media (max-width: 600px)  {
+    .wrapper-banner h1{
+        font-size: 2.5em;
+    }
+}
 </style>
 
 

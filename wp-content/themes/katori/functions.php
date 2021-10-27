@@ -5,14 +5,14 @@ require('post-types/products.php');
 
 function katori_styles(){
 	wp_enqueue_style('normalize', get_stylesheet_directory_uri().'/css/normalize.css');
-	wp_enqueue_style('bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
+	wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/bootstrap/bootstrap@5.1.3.css');
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
 function katori_scripts(){
     wp_enqueue_script('jquery');
-    wp_enqueue_script('popper','https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js');
-	wp_enqueue_script('bootstrapjs', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js", array('jquery') , '4.3.1', true);
+    wp_enqueue_script('popper', get_stylesheet_directory_uri().'/bootstrap/popper@2.10.2.min.js');
+	wp_enqueue_script('bootstrapjs', get_stylesheet_directory_uri().'/bootstrap/bootstrap@5.1.3.min.js' , array('jquery') , '4.3.1', true);
 }
 
 
