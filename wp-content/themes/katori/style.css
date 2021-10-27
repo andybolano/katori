@@ -144,15 +144,22 @@ li.nav-item > a{
     font-family: var(--primary-font-bold);
     font-size: 1.2em !important;
 }
+
 .dropdown-menu{
     background-color: var(--primary-color);
     border-radius: 0;
+    padding: 0;
 }
 
 .dropdown-item{
     color:var(--light-color);
     font-family: var(--primary-font-bold);
     font-size: 1.2em;
+    padding: 0.2em 0.5em;
+}
+
+.menu-item  a{
+    margin: 0;
 }
 
 .dropdown-item:hover{
@@ -177,7 +184,13 @@ li.nav-item > a{
 
 }
 
+
 @media (max-width: 992px)  {
+
+    li.nav-item > a{
+        font-size: 1.5em !important;
+    }
+
     .offcanvas-end{
         width: 90% !important;
         max-width: 400px;
@@ -185,6 +198,10 @@ li.nav-item > a{
         top: 0;
         right: 0;
         left: auto;
+    }
+
+    .dropdown-item {
+        font-size: 1.5em;
     }
 }
 
