@@ -212,7 +212,7 @@ li.nav-item > a{
 
 .social-network{
     display: none;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .social-network ul{
@@ -220,9 +220,15 @@ li.nav-item > a{
     padding: 0;
 }
 
+.social-network li p{
+    margin-top: 10px;
+}
+
 .social-network li{
     display: inline;
     padding-right: 10px;
+  
+
 }
 
 .social-network.mobile{
@@ -234,26 +240,44 @@ li.nav-item > a{
 .social-item li a {
     display: inline-block;
     vertical-align: top;
-    width: 26px;
-    height: 26px;
+    width: 42px;
+    height: 42px;
     background-size: 100%;
     background-position: center;
     margin: 0;
 }
 
 .social-item li a[href*="instagram.com"]{
-	background-image: url('img/instagram.png');
+	background-image: url('img/instagram.svg');
+}
+
+.social-item.header li a[href*="instagram.com"]{
+    width: 28px;
+    height: 28px;
+	background-image: url('img/instagram-green.svg');
 }
 
 .social-item li a[href*="facebook.com"]{
-	background-image: url('img/facebook.png');
+	background-image: url('img/facebook.svg');
+}
+
+.social-item.header li a[href*="facebook.com"]{
+    width: 28px;
+    height: 28px;
+	background-image: url('img/facebook-green.svg');
+}
+
+
+.social-item li a[href*="youtube.com"]{
+	background-image: url('img/youtube.svg');
 }
 
 .social-item li a[href*="wa.me"]{
-    width: 42px;
-    height: 42px;
+    width: 62px;
+    height: 62px;
 	background-image: url('img/whatsapp.png');
     margin: 0;
+    margin-top:-10px;
 }
 
 .social-network p{
